@@ -27,8 +27,17 @@ class BookRepository {
         Book(isbn = "", title = "The Pragmatic Programmer", nbPages = 0),
         Book(isbn = "", title = "Design Patterns", nbPages = 0),
         Book(isbn = "", title = "Refactoring", nbPages = 0),
-        Book(isbn = "", title = "Head First Design Patterns", nbPages = 0)
+        Book(isbn = "", title = "Head First Design Patterns", nbPages = 0),
+
+        Book(isbn = "9780132350884", title = "Clean Code", nbPages = 464),
+        Book(isbn = "9780201616224", title = "The Pragmatic Programmer", nbPages = 352),
+        Book(isbn = "9780134494166", title = "Clean Architecture", nbPages = 432),
+        Book(isbn = "9781491950357", title = "Designing Data-Intensive Applications", nbPages = 616),
+        Book(isbn = "9780596007126", title = "Head First Design Patterns", nbPages = 694),
     )
+
+
+
 
     /**
      * TODO for Students (TP1 - Exercise 2):
