@@ -1,6 +1,7 @@
 package com.ElOuedUniv.maktaba.presentation.book
 
 import com.ElOuedUniv.maktaba.data.model.Book
+import com.ElOuedUniv.maktaba.presentation.book.BookUiState
 
 /**
  * UI State for the Book list screen.
