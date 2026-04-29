@@ -1,4 +1,4 @@
-package com.ElOuedUniv.maktaba.presentation.onboarding
+package com.eloueduniv.maktaba.presentation.onboarding
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -22,9 +22,9 @@ fun OnboardingView(
         Spacer(modifier = Modifier.height(16.dp))
         Text("Your personal digital library.")
         Spacer(modifier = Modifier.height(32.dp))
-        Button(onClick = { 
+        Button(onClick = {
             viewModel.onCompleteOnboarding()
-            onNavigateToLibrary() 
+            onNavigateToLibrary()
         }) {
             Text("Get Started")
         }

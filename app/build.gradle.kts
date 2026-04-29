@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ElOuedUniv.maktaba"
+    namespace = "com.eloueduniv.maktaba"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.ElOuedUniv.maktaba"
+        applicationId = "com.eloueduniv.maktaba"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -46,11 +46,14 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    
+
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
+
+    // Coil
+    implementation(libs.coil.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

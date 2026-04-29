@@ -1,15 +1,15 @@
-package com.ElOuedUniv.maktaba.presentation.navigation
+package com.eloueduniv.maktaba.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.ElOuedUniv.maktaba.presentation.book.BookListView
-import com.ElOuedUniv.maktaba.presentation.book.add.AddBookView
-import com.ElOuedUniv.maktaba.presentation.book.detail.BookDetailView
-import com.ElOuedUniv.maktaba.presentation.category.CategoryListView
-import com.ElOuedUniv.maktaba.presentation.onboarding.OnboardingView
+import com.eloueduniv.maktaba.presentation.book.BookListView
+import com.eloueduniv.maktaba.presentation.book.add.AddBookView
+import com.eloueduniv.maktaba.presentation.book.detail.BookDetailView
+import com.eloueduniv.maktaba.presentation.category.CategoryListView
+import com.eloueduniv.maktaba.presentation.onboarding.OnboardingView
 
 @Composable
 fun NavGraph(
@@ -28,25 +28,25 @@ fun NavGraph(
                 }
             )
         }
-        
+
         composable(Screen.BookList.route) {
             BookListView(
                 onCategoriesClick = { navController.navigate(Screen.CategoryList.route) },
                 onAddBookClick = { navController.navigate(Screen.AddBook.route) },
-                onBookClick = { isbn -> 
+                onBookClick = { isbn ->
                     navController.navigate(Screen.BookDetail.createRoute(isbn))
                 }
             )
         }
-        
+
         composable(Screen.BookDetail.route) {
             BookDetailView(onBackClick = { navController.popBackStack() })
         }
-        
+
         composable(Screen.CategoryList.route) {
             CategoryListView(onBackClick = { navController.popBackStack() })
         }
-        
+
         composable(Screen.AddBook.route) {
             AddBookView(onBackClick = { navController.popBackStack() })
         }
